@@ -19,11 +19,12 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            "title" => $this->faker->text(30),
-            "content" => $this->faker->text,
-            "user_id" => User::all()->random(1)->first()->id,
-            "category_id" => Category::all()->random(1)->first()->id,
-            "created_at" => now(),
+
+            'title' => $this->faker->text(30),
+            'content' => $this->faker->text,
+            'user_id' => User::all()->random(1)->first()->id,
+            'category_id' => Category::all()->random(1)->first()->id,
+            'created_at' => now(),
         ];
     }
 }
